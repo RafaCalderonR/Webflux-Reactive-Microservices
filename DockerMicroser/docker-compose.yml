@@ -18,24 +18,7 @@ services:
             - proi
         depends_on: 
             - servicio-eureka-server
-    service-store:
-        build:
-            context: .
-            dockerfile: store.Dockerfile
-        restart: always
-        networks:
-            - proi
-        depends_on:
-            - servicio-eureka-server
-    service-assistance:
-        build:
-            context: .
-            dockerfile: assistance.Dockerfile
-        restart: always
-        networks:
-            - proi
-        depends_on:
-            - servicio-eureka-server
+
     service-factory:
         build: 
             context: .
@@ -45,25 +28,6 @@ services:
             - proi
         depends_on: 
             - servicio-eureka-server
-    service-users:
-        build: 
-            context: .
-            dockerfile: user.Dockerfile  
-        restart: always
-        networks:
-            - proi
-        depends_on: 
-            - servicio-eureka-server
-    service-oauth:
-        build: 
-            context: .
-            dockerfile: oauth.Dockerfile  
-        restart: always
-        networks:
-            - proi
-        depends_on: 
-            - servicio-eureka-server
-            - service-users  
     gateway: 
         build: 
             context: .
@@ -74,12 +38,9 @@ services:
             - proi
         depends_on: 
             - servicio-eureka-server
-            - service-users  
-            - service-oauth
             - service-assistance
             - service-factory
             - service-farming
-            - service-store
     microservicios-rabbitmq38:
         image: rabbitmq:3.8-management-alpine
         ports:
