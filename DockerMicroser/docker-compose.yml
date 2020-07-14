@@ -1,0 +1,108 @@
+version: '3.7'
+services:
+    servicio-eureka-server:
+        build: 
+            context: .
+            dockerfile: eureka.Dockerfile  
+        ports:
+          - "8761:8761"
+        restart: always
+        networks:
+          - proi
+    service-farming:
+        build: 
+            context: .
+            dockerfile: farming.Dockerfile
+        restart: always
+        networks:
+            - proi
+        depends_on: 
+            - servicio-eureka-server
+    service-store:
+        build:
+            context: .
+            dockerfile: store.Dockerfile
+        restart: always
+        networks:
+            - proi
+        depends_on:
+            - servicio-eureka-server
+    service-assistance:
+        build:
+            context: .
+            dockerfile: assistance.Dockerfile
+        restart: always
+        networks:
+            - proi
+        depends_on:
+            - servicio-eureka-server
+    service-factory:
+        build: 
+            context: .
+            dockerfile: factory.Dockerfile
+        restart: always
+        networks:
+            - proi
+        depends_on: 
+            - servicio-eureka-server
+    service-users:
+        build: 
+            context: .
+            dockerfile: user.Dockerfile  
+        restart: always
+        networks:
+            - proi
+        depends_on: 
+            - servicio-eureka-server
+    service-oauth:
+        build: 
+            context: .
+            dockerfile: oauth.Dockerfile  
+        restart: always
+        networks:
+            - proi
+        depends_on: 
+            - servicio-eureka-server
+            - service-users  
+    gateway: 
+        build: 
+            context: .
+            dockerfile: gateway.Dockerfile  
+        ports:
+             - "8090:8090"
+        networks:
+            - proi
+        depends_on: 
+            - servicio-eureka-server
+            - service-users  
+            - service-oauth
+            - service-assistance
+            - service-factory
+            - service-farming
+            - service-store
+    microservicios-rabbitmq38:
+        image: rabbitmq:3.8-management-alpine
+        ports:
+            - "15672:15672"
+            - "5672:5672"
+        restart: always
+        networks:
+            - proi
+    zipkin-server:
+        build: 
+            context: .
+            dockerfile: zipkin.Dockerfile  
+        container_name: zipkin
+        ports:
+            - 9411:9411
+        restart: always
+        depends_on: 
+           - microservicios-rabbitmq38
+        environment: 
+          RABBIT_ADDRESSES: microservicios-rabbitmq38:5672
+        networks:
+            - proi
+networks:
+    proi:
+            
+    

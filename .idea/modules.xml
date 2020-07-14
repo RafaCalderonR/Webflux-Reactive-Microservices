@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Proyecto Integrado.iml" filepath="$PROJECT_DIR$/.idea/Proyecto Integrado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-assistance/microservice-assistance.iml" filepath="$PROJECT_DIR$/microservice-assistance/microservice-assistance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-config-server/microservice-config-server.iml" filepath="$PROJECT_DIR$/microservice-config-server/microservice-config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-eureka-server/microservice-eureka-server.iml" filepath="$PROJECT_DIR$/microservice-eureka-server/microservice-eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-factory/microservice-factory.iml" filepath="$PROJECT_DIR$/microservice-factory/microservice-factory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-farming/microservice-farming.iml" filepath="$PROJECT_DIR$/microservice-farming/microservice-farming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-material/microservice-material.iml" filepath="$PROJECT_DIR$/microservice-material/microservice-material.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-oauth/microservice-oauth.iml" filepath="$PROJECT_DIR$/microservice-oauth/microservice-oauth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-product/microservice-product.iml" filepath="$PROJECT_DIR$/microservice-product/microservice-product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-store/microservice-store.iml" filepath="$PROJECT_DIR$/microservice-store/microservice-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-user/microservice-user.iml" filepath="$PROJECT_DIR$/microservice-user/microservice-user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/microservice-zuul/microservice-zuul.iml" filepath="$PROJECT_DIR$/microservice-zuul/microservice-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-user-commons/service-user-commons.iml" filepath="$PROJECT_DIR$/service-user-commons/service-user-commons.iml" />
+    </modules>
+  </component>
+</project>

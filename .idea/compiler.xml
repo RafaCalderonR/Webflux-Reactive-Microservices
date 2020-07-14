@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="microservice-user" />
+        <module name="microservice-eureka-server" />
+        <module name="microservice-store" />
+        <module name="microservice-product" />
+        <module name="gateway" />
+        <module name="microservice-assistance" />
+        <module name="microservice-config-server" />
+        <module name="cloud-gateway" />
+        <module name="microservice-factory" />
+        <module name="microservice-products" />
+        <module name="microservice-oauth" />
+        <module name="service-user-commons" />
+        <module name="microservice-material" />
+        <module name="microservice-zuul" />
+        <module name="microservice-farming" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-gateway" target="11" />
+      <module name="gateway" target="11" />
+      <module name="microservice-assistance" target="11" />
+      <module name="microservice-cloud-gateway" target="11" />
+      <module name="microservice-config-server" target="11" />
+      <module name="microservice-eureka-server" target="1.8" />
+      <module name="microservice-factory" target="11" />
+      <module name="microservice-farming" target="11" />
+      <module name="microservice-job" target="11" />
+      <module name="microservice-material" target="11" />
+      <module name="microservice-oauth" target="11" />
+      <module name="microservice-product" target="11" />
+      <module name="microservice-products" target="11" />
+      <module name="microservice-store" target="11" />
+      <module name="microservice-trading" target="11" />
+      <module name="microservice-user" target="11" />
+      <module name="microservice-user-commons" target="11" />
+      <module name="microservice-zuul" target="11" />
+      <module name="service-user-commons" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cloud-gateway" options="-parameters" />
+      <module name="gateway" options="-parameters" />
+      <module name="microservice-assistance" options="-parameters" />
+      <module name="microservice-cloud-gateway" options="-parameters" />
+      <module name="microservice-config-server" options="-parameters" />
+      <module name="microservice-eureka-server" options="-parameters" />
+      <module name="microservice-factory" options="-parameters" />
+      <module name="microservice-farming" options="-parameters" />
+      <module name="microservice-job" options="-parameters" />
+      <module name="microservice-material" options="-parameters" />
+      <module name="microservice-oauth" options="-parameters" />
+      <module name="microservice-product" options="-parameters" />
+      <module name="microservice-products" options="-parameters" />
+      <module name="microservice-store" options="-parameters" />
+      <module name="microservice-trading" options="-parameters" />
+      <module name="microservice-user" options="-parameters" />
+      <module name="microservice-user-commons" options="-parameters" />
+      <module name="microservice-zuul" options="-parameters" />
+      <module name="service-user-commons" options="-parameters" />
+    </option>
+  </component>
+</project>
